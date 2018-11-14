@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    </head>
+
+    <body>
+        <h1>FLEX</h1>
+        <h2>Track your spending habits</h2>
+        <div>
+            <a class="active" href="flex.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>
+            An easy way to track all your expenses and predict how you can save for your next purchase!
+        </p>
+        <form id ='uber'>
+            Monthly income: <input type="number" name="income" placeholder="£ 100">
+            <br>
+            <br>
+            <select>
+                <option value="select">Select</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="shopping">Shopping</option>
+                <option value="eating">Eating Out</option>
+                <option value="movies">Movies</option>
+            </select>
+            <input type="number" name="amount" placeholder="£ 100"  class="expense">
+         
+            <br>
+            <br>
+            <select>
+                <option value="select">Select</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="shopping">Shopping</option>
+                <option value="eating">Eating Out</option>
+                <option value="movies">Movies</option>
+            </select>
+            <input type="number" name="amount" placeholder="£ 100"  class="expense">
+            <br>
+            <br>
+            <select>
+                <option value="select">Select</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="shopping">Shopping</option>
+                <option value="eating">Eating Out</option>
+                <option value="movies">Movies</option>
+            </select>
+            <input type="number" name="amount" placeholder="£ 100"  class="expense">
+                <br>
+                <br>
+            <select>
+                <option value="select">Select</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="shopping">Shopping</option>
+                <option value="eating">Eating Out</option>
+                <option value="movies">Movies</option>
+            </select>
+            <input type="number" name="amount" placeholder="£ 100"  class="expense">
+            <br>
+            <br>
+            <select>
+                <option value="select">Select</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="shopping">Shopping</option>
+                <option value="eating">Eating Out</option>
+                <option value="movies">Movies</option>
+            </select>
+            <input type="number" name="amount" placeholder="£ 100"  class="expense">
+            <br>
+            <br>
+            I want to buy: <input type="text" id="buy" placeholder="I want to buy...">
+            <br>
+            <br>
+            Months to save: <input type="number" name="months">
+            <br>
+            <br>
+            <input type="button"value="Submit" id="but">
+        </form>
+
+        <script>
+                $('#but').click(function(event){
+                    var total = 0
+                    $('.expense').each(function(){
+                        total += Number($(this).val()); 
+                    });
+                    $('#buy').val(total); 
+                });
+            </script>
+
+
+    </body>
+</html>
